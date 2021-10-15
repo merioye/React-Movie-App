@@ -1,0 +1,136 @@
+.search-page-container{
+    width: 100%;
+    height: auto;
+    background: #39445a;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+.search-box-container{
+    width: 1250px;
+    height: 50px;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-box{
+    height: 100%;
+    width: 100%;
+    background: #505b72;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-left: 20px;
+    font-size: 1.3rem;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+.search-box:hover{
+    background: #636f8a;
+}
+
+.search-and-movies-tabs{
+    width: 1250px;
+    height: 70px;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+}
+.search-and-movies-tabs div{
+    /* border: 2px solid green; */
+    line-height: 70px;
+    color: white;
+    padding: 0px 100px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+
+.tv-and-movies-items-container{
+    width: 1250px;
+    height: 1700px;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+/* ############ Responsive style ########## */
+@media only screen and (max-width:1300px){
+    .search-box-container{
+        width: 90%;
+    }   
+    .search-and-movies-tabs{
+        width: 90%;
+    }
+    .tv-and-movies-items-container{
+        width: 1000px;
+        height: 2120px;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .tv-and-movies-items-container{
+        width: 500px;
+        height: 4300px;
+    }
+}
+@media only screen and (max-width:800px){
+    .search-and-movies-tabs{
+        height: 60px;
+        justify-content: center;
+    }
+    .search-and-movies-tabs div{
+        line-height: 60px;
+        padding: 0px 50px;
+    }
+    .search-page-container{
+        margin-top: 80px;
+    }
+    .tv-and-movies-page-container{
+        margin-top: 80px;
+    }
+}
+@media only screen and (max-width:580px){
+    .search-and-movies-tabs{
+        height: 50px;
+    }
+    .search-and-movies-tabs div{
+        line-height: 50px;
+        padding: 0px 20px;
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width:536px){
+    .tv-and-movies-items-container{
+        width: 270px;
+        height: 8400px;
+    }
+}
+@media only screen and (max-width:386px){
+    .search-and-movies-tabs div{
+        padding: 0px 10px;
+    }
+}

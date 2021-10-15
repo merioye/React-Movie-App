@@ -1,0 +1,65 @@
+.movies-page-container{
+    width: 100%;
+    height: auto;
+    background: #39445a;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+.genres-container{
+    width: 1250px;
+    height: auto;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.movies-items-container{
+    width: 1250px;
+    height: 1700px;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+/* ############### Responsive style ################ */
+@media only screen and (max-width:1300px){
+    .genres-container{
+        width: 95%;
+    }
+    .movies-items-container{
+        width: 1000px;
+        height: 2120px;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .movies-items-container{
+        width: 500px;
+        height: 4300px;
+    }
+}
+@media only screen and (max-width:800px){
+    .movies-page-container{
+        margin-top: 80px;
+    }
+}
+@media only screen and (max-width:536px){
+    .movies-items-container{
+        width: 270px;
+        height: 8400px;
+    }
+}

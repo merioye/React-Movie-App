@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Trending from './pages/Trending/Trending';
+import Movies from './pages/Movies/Movies';
+import TVSeries from './pages/TVSeries/TVSeries';
+import Search from './pages/Search/Search';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=>{
+    return(
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path='/' component={Trending} />
+                    <Route path='/movies' component={Movies} />
+                    <Route path='/tv' component={TVSeries} />
+                    <Route path='/search' component={Search} />
+                </Switch>
+            </BrowserRouter>
+        </>
+    )
 }
 
 export default App;

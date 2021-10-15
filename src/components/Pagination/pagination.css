@@ -1,0 +1,35 @@
+.pagination {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    outline: none;
+}
+  
+.pagination>.active>a {
+    background-color: #3f51b5;
+    color: #fff;
+}
+    
+.pagination>li>a {
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+    
+.pagination>li>a, .pagination>li>span {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.pagination>li>a:hover{
+    background: rgba(255, 255, 255, 0.08);
+}
+.pagination>.active>a:hover{
+    background: #3f51b5c7;
+}
+
+

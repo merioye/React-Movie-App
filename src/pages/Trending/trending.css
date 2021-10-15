@@ -1,0 +1,46 @@
+.trending-page-container{
+    width: 100%;
+    height: auto;
+    background: #39445a;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+.trending-items-container{
+    width: 1250px;
+    height: 1700px;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+/* ############ Resonsive Style ############ */
+@media only screen and (max-width:1300px){
+    .trending-items-container{
+        width: 1000px;
+        height: 2120px;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .trending-items-container{
+        width: 500px;
+        height: 4300px;
+    }
+}
+@media only screen and (max-width:800px){
+    .trending-page-container{
+        margin-top: 80px;
+    }
+}
+@media only screen and (max-width:536px){
+    .trending-items-container{
+        width: 270px;
+        height: 8400px;
+    }
+}
