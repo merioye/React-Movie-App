@@ -21,7 +21,7 @@ const Search = ()=>{
     useEffect(()=>{
         const fetchSearchResult = async ()=>{
             try{
-                const res = await fetch(`https://api.themoviedb.org/3/search/${tab}?api_key={Your Api Key Here}&query=${val}&page=${pageNo}`);
+                const res = await fetch(`https://api.themoviedb.org/3/search/${tab}?api_key=${process.env.REACT_APP_API_KEY}&query=${val}&page=${pageNo}`);
                 if(!res.ok){
                     throw new Error(res.status);
                 }
@@ -59,7 +59,7 @@ const Search = ()=>{
 
     const fetchCredits = async (id, media)=>{
         try{
-            const res = await fetch(`http://api.themoviedb.org/3/${tab}/${id}/credits?api_key={Your Api Key Here}&language=en-US`);
+            const res = await fetch(`http://api.themoviedb.org/3/${tab}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
             if(!res.ok){
                 throw new Error(res.status);
             }
@@ -71,7 +71,7 @@ const Search = ()=>{
     }
     const fetchYtLink = async (id, media)=>{
         try{
-            const res = await fetch(`https://api.themoviedb.org/3/${tab}/${id}/videos?api_key={Your Api Key Here}`);
+            const res = await fetch(`https://api.themoviedb.org/3/${tab}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}`);
             if(!res.ok){
                 throw new Error(res.status);
             }

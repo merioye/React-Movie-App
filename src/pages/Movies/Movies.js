@@ -23,7 +23,7 @@ const Movies = ()=>{
 
     const fetchGenres = async ()=>{
         try{
-            const res = await fetch('https://api.themoviedb.org/3/genre/movie/list?api_key={Your Api Key Here}&language=en-US');
+            const res = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
             if(!res.ok){
                 throw new Error(res.status);
             }
@@ -42,7 +42,7 @@ const Movies = ()=>{
     useEffect(()=>{
         const fetchMovies = async ()=>{
             try{
-                const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key={Your Api Key Here}&language=en-US&page=${pageNo}&with_genres=${genreList.join('|')}`);
+                const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${pageNo}&with_genres=${genreList.join('|')}`);
                 if(!res.ok){
                     throw new Error(res.status);
                 }
@@ -82,7 +82,7 @@ const Movies = ()=>{
 
     const fetchCredits = async (id)=>{
         try{
-            const res = await fetch(`http://api.themoviedb.org/3/movie/${id}/credits?api_key={Your Api Key Here}&language=en-US`);
+            const res = await fetch(`http://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
             if(!res.ok){
                 throw new Error(res.status);
             }
@@ -94,7 +94,7 @@ const Movies = ()=>{
     }
     const fetchYtLink = async (id)=>{
         try{
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key={Your Api Key Here}`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}`);
             if(!res.ok){
                 throw new Error(res.status);
             }

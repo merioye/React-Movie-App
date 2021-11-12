@@ -20,7 +20,7 @@ const Trending = ()=>{
     useEffect(()=>{
         const fetchTrending = async ()=>{
             try{
-                const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key={Your Api Key Here}&page=${pageNo}`);
+                const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${pageNo}`);
                 if(!res.ok){
                     throw new Error(res.status);
                 }
@@ -46,7 +46,7 @@ const Trending = ()=>{
 
     const fetchCredits = async (id, media)=>{
         try{
-            const res = await fetch(`http://api.themoviedb.org/3/${media}/${id}/credits?api_key={Your Api Key Here}&language=en-US`);
+            const res = await fetch(`http://api.themoviedb.org/3/${media}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
             if(!res.ok){
                 throw new Error(res.status);
             }
@@ -58,7 +58,7 @@ const Trending = ()=>{
     }
     const fetchYtLink = async (id, media)=>{
         try{
-            const res = await fetch(`https://api.themoviedb.org/3/${media}/${id}/videos?api_key={Your Api Key Here}`);
+            const res = await fetch(`https://api.themoviedb.org/3/${media}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}`);
             if(!res.ok){
                 throw new Error(res.status);
             }
